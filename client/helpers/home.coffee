@@ -1,2 +1,3 @@
-Template.home.events
-	'click .crushBtn': (e) ->
+Template.home.helpers
+	user: ->
+		Profiles.findOne(createdBy: Meteor.userId()).firstname
