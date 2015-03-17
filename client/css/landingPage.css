@@ -1,0 +1,10 @@
+/* css */
+
+.landingPageContainer {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	background-size: cover cover;
+	background-repeat: no-repeat;
+}

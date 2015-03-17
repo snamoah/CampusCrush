@@ -1,0 +1,2 @@
+Template.registerHelper 'home', ->
+	"Home"
