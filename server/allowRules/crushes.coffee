@@ -1,2 +1,2 @@
-Crushes.allow insert: (doc, userId) ->
-	true
+#Crushes.allow insert: (doc, userId) ->
+#	true

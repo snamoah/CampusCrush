@@ -2,31 +2,48 @@ Profiles = new Mongo.Collection('profiles')
 
 Schema = {}
 
-Schema.profile = new SimpleSchema(
+Schema.profile = new SimpleSchema
 	firstname: 
-		type: String,
+		type: String
 		max: 50
 
 	lastname:
-		type: String,
+		type: String
 		max: 50
 
+	fullName:
+		type: String
+		max: 200
+		autoform:
+			omit: true
+
 	username:
-		type: String,
+		type: String
 		max: 70
 
 	gender:
-		type: String,
+		type: String
 		allowedValues: [ 'Male', 'Female' ]
 	
 	picture:
 		type: String
 
 	createdBy:
-		type: String,
+		type: String
 		autoValue: ->
 			if @Insert
 				return Meteor.userId()
-)
+		autoform:
+			omit: true
+
+	updatedAt:
+		type: String
+		autoValue: ->
+			if @Update
+				return Meteor.userId()
+		autoform:
+			omit: true
+		optional: true
+
 
 Profiles.attachSchema Schema.profile
