@@ -2,13 +2,22 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<input type="text" class="form-control search" placeholder="Search People...">
+				<input type="text" maxlength="50" class="form-control search" placeholder="Search People...">
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col-md-12">
-			</div>
+			{{#if searchResults}}
+				{{#each people}}
+				<div class="col-md-12">
+						<h1>{{firstname}} <button class='btn btn-primary crushBtn'>love</button></h1>
+				</div>
+				{{else}}
+				<div class="col-md-12">
+					<h1 class="text-center">No results found for <em>{{filter}}</em></h1>
+				</div>
+				{{/each}}
+			{{/if}}
 		</div>
 	</div>
 </template>
