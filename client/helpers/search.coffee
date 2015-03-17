@@ -10,7 +10,10 @@ Template.search.events
 
 Template.search.helpers
 	'people': -> 
-			Profiles.find('fullname': '$regex': Session.get 'filter').fetch().filter (e) ->
+			Profiles.find('fullname': 
+				'$regex': Session.get 'filter'
+				'$options': 'i'
+			).fetch().filter (e) ->
 				e.createdBy != Meteor.userId()
 
 	'filter': ->
