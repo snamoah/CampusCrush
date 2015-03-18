@@ -2,7 +2,9 @@ Router.configure layoutTemplate: 'layout'
 
 Router.route '/', (->
 	@render 'signin'
-), name: 'root'
+), 
+	name: 'root'
+	data: homepage: true
 
 Router.route '/search', (->
 	@render 'search'

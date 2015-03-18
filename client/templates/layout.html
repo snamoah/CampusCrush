@@ -1,7 +1,10 @@
 <template name="layout">
 	<div class="page">
-		{{> header}}		
+		{{#if homepage}}
+			{{> header}}		
+		{{/if}}
+
+		{{> yield}}
+		{{> modal}}
 	</div>
-	{{> yield}}
-	{{> modal}}
 </template>
