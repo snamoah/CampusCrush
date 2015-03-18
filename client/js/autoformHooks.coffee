@@ -15,4 +15,5 @@ AutoForm.hooks
 
 	insertEmailsForm:
 		onSuccess: (formType, result) ->
-			$('#myModal').modal('hide');
+			$('#emailModal').modal('hide');
+			$('#emailSuccess').modal('show');
