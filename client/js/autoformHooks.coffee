@@ -1,5 +1,5 @@
 AutoForm.hooks
-	insertProfileForm: 
+	insertProfileForm:
 		formToDoc: (doc) ->
 			console.log doc
 			doc.createdBy = Meteor.userId()
@@ -12,3 +12,7 @@ AutoForm.hooks
 
 		onError: (formType, result) ->
 			console.log result
+
+	insertEmailsForm:
+		onSuccess: (formType, result) ->
+			$('#myModal').modal('hide');
