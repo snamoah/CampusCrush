@@ -1,7 +1,9 @@
-Router.configure layoutTemplate: 'layout'
+Router.configure 
+	layoutTemplate: 'layout'
+	trackPageView: true
 
 Router.route '/', (->
-	@render 'signin'
+	@render 'root'
 ), 
 	name: 'root'
 	data: homepage: true
