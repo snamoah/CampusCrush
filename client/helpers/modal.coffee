@@ -11,3 +11,6 @@ Template.modal.events
 			to: this.createdBy
 			from: Meteor.userId()
 			createdAt: new Date()
+
+	'click .modal-close': (e) ->
+		console.log e

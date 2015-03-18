@@ -3,3 +3,7 @@
 body {
 	font-family: Lobster;
 }
+
+.modal-close {
+	margin: 0.5em 0.7em;
+}

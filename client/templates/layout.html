@@ -1,10 +1,12 @@
 <template name="layout">
 		{{> header}}
-		{{#if user}}
+		{{#if index}}
+		{{else}}
 		<section id="content">	
 			{{> yield}}
 		</section>
-		{{> footer}}
 		{{/if}}
+		
+		{{> footer}}
 		{{> modal}}
 </template>

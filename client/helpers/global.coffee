@@ -5,3 +5,6 @@ Template.registerHelper 'objectPronouns', (sex) ->
 
 Template.registerHelper 'user', ->
 	Meteor.user()
+
+Template.registerHelper 'index', ->
+	Router.current().url.split('/')[3] == "" || Router.current().url == '/'
