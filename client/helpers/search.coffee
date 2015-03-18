@@ -4,7 +4,6 @@ Template.search.events
 		Session.set 'filter', e.currentTarget.value
 
 	'click .crushBtn': (e) ->
-		console.log this
 		Session.set 'crushReceipient', this.createdBy
 		$('#crushRequestModal').modal()
 

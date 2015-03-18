@@ -3,10 +3,13 @@ Router.configure
 	trackPageView: true
 
 Router.route '/', (->
+	index = true
 	@render 'root'
-), 
-	name: 'root'
-	data: homepage: true
+), name: 'root'
+
+Router.route '/signin', (->
+	@render 'signin'
+), name: 'signin'
 
 Router.route '/search', (->
 	@render 'search'
@@ -23,5 +26,6 @@ Router.route '/home', (->
 
 Router.route '/signout', (->
 	Meteor.logout()
-	Router.go 'root'
+	@redirect '/'
 ), name: 'signout'			
+

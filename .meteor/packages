@@ -14,5 +14,4 @@ useraccounts:core
 accounts-password
 twbs:bootstrap
 useraccounts:bootstrap
-insecure
 reywood:iron-router-ga

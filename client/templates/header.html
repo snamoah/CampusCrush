@@ -1,5 +1,6 @@
 <template name="header">
 	<header id="header">
+		{{#if index}}
 		<div class="camera-wrapper">
 			<div id="camera" class="camera-wrap">
 				<img src="/images/aaa1.png">
@@ -14,7 +15,7 @@
 				</div>
 			</div>
 		</div>
-
+		{{/if}}
 		<div id="stuck_container">
 			<div class="container">
 				<div class="row">
@@ -43,6 +44,7 @@
 								<li><a href="index-3.html">Add profile</a></li>
 								<li><a href="index-4.html">News</a></li>
 								<li><a href="index-5.html">Contacts</a></li>
+								<li><a href="/signout">Logout</a></li>
 							</ul>
 							{{/if}}
 						</nav>
