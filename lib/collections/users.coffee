@@ -24,9 +24,14 @@ Schema.profile = new SimpleSchema
 	gender:
 		type: String
 		allowedValues: [ 'Male', 'Female' ]
+		label: "What's your gender"
 	
 	picture:
 		type: String
+ 		autoform: afFieldInput:
+    	type: 'fileUpload'
+    	collection: 'images'
+		label: 'Choose file'
 
 	createdBy:
 		type: String

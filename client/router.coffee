@@ -19,6 +19,10 @@ Router.route '/profile', (->
 	@render 'profile'
 ), name: 'profile'
 
+Router.route '/profile/edit', (->
+	@render 'editProfile'
+), name: 'editProfile'
+			
 Router.route '/home', (->
 	@render 'home'
 ), name: 'home'

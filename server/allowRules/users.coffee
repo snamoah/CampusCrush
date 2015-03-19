@@ -13,6 +13,9 @@ Profiles.allow
 		true
 
 	update: (doc, userId) ->
+		console.log doc
+		if doc.createdBy == userId
+			return true
 		false
 
 	remove: (doc, userId) ->

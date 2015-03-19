@@ -1,0 +1,11 @@
+<template name="editProfile">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-offset-3 col-md-6">
+				{{#with profile}}
+					{{> quickForm doc=this collection="Profiles" type="update"}}
+				{{/with}}
+			</div>
+		</div>
+	</div>
+</template>
