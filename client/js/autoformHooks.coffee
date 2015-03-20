@@ -15,5 +15,9 @@ AutoForm.hooks
 
 	insertEmailsForm:
 		onSuccess: (formType, result) ->
-			$('#emailModal').modal('hide');
-			$('#emailSuccess').modal('show');
+			$('#emailModal').modal('hide')
+			$('#emailSuccess').modal('show')
+
+	updateProfileForm:
+		onSuccess: (formType, result) ->
+			Router.go 'home'

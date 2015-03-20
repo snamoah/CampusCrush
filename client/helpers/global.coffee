@@ -8,3 +8,6 @@ Template.registerHelper 'user', ->
 
 Template.registerHelper 'index', ->
 	Router.current().url.split('/')[3] == "" || Router.current().url == '/'
+
+Template.registerHelper 'getImageUrl', (id) ->
+	Images.findOne(id).url

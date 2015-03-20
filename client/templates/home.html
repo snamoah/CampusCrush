@@ -1,5 +1,9 @@
 <template name="home">
 	<div class="container">
+		<div class="row">
+			<div class="col-md-2 pull-right"><h3><a href="/inbounds"><em>{{crushesResponsePending}}</em> inbound(s)</a></h3></div>
+			<div class="col-md-2 pull-right"><h3><em>{{crushes}}</em> crush(es)</h3></div>
+		</div>
 	{{> search }}
 	</div>
 </template>

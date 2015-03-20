@@ -1,22 +1,21 @@
 Meteor.users.allow
-	insert: (doc, userId) ->
+	insert: (userId, doc) ->
 		true
 
-	update: (doc, userId) ->
+	update: (userId, doc) ->
 		false
 
-	remove: (doc, userId) ->
+	remove: (userId, doc) ->
 		false
 
 Profiles.allow
-	insert: (doc, userId) ->
+	insert: (userId, doc) ->
 		true
 
-	update: (doc, userId) ->
-		console.log doc
+	update: (userId, doc) ->
 		if doc.createdBy == userId
 			return true
 		false
 
-	remove: (doc, userId) ->
+	remove: (userId, doc) ->
 		false

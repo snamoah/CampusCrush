@@ -27,6 +27,8 @@
       </div>
       <div class="modal-body">
         <h3>Are you sure you want to let {{objectPronouns gender}} know?</h3>
+
+				<p><input type="checkbox" class="crushType"> Make public?</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
@@ -35,8 +37,18 @@
     </div>
   </div>
 </div>
-{{/with}}
 
+<div class="modal fade bs-example-modal-sm" id="crushAlertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h3>So you have a crush on {{firstname}}</h3>
+      </div>
+    </div>
+  </div>
+</div>
+{{/with}}
 
 <div class="modal fade bs-example-modal-sm" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -90,4 +102,6 @@
 </div>
 </div>
 <!-- / Success message modal -->
+
+
 </template>
