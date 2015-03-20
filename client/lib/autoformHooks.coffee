@@ -16,6 +16,7 @@ AutoForm.hooks
 	insertEmailsForm:
 		onSuccess: (formType, result) ->
 			$('#emailModal').modal('hide')
+			Meteor.call 'subscriptionReply', Emails.findOne(result).email 
 			$('#emailSuccess').modal('show')
 
 	updateProfileForm:
