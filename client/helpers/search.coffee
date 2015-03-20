@@ -3,6 +3,10 @@ Template.search.events
 		Session.set 'searchResults', true
 		Session.set 'filter', e.currentTarget.value
 
+		if e.currentTarget.value == ''
+			$('.col-md-12').html("")
+
+
 	'click .crushBtn': (e) ->
 		Session.set 'crushReceipient', this.createdBy
 		$('#crushRequestModal').modal()
