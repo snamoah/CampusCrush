@@ -17,3 +17,6 @@ Template.inbounds.events
 	'click .acceptBtn': ->
 		c = Crushes.findOne to: Meteor.userId(), accepted: 'nd', from: this.createdBy
 		Crushes.update {_id: c._id}, $set: accepted: 'y'
+
+Template.inbounds.rendered = ->
+	$('.navbar-default').addClass('scrolled')

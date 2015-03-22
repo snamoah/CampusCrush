@@ -4,3 +4,6 @@ Template.home.helpers
 	
 	crushes: ->
 		Crushes.find(from: Meteor.userId()).count()
+
+Template.home.rendered = ->
+	$('.navbar-default').addClass('scrolled')

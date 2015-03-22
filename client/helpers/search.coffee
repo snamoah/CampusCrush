@@ -1,11 +1,11 @@
 Template.search.events
-	'keyup .search': (e) ->
-		Session.set 'searchResults', true
+	'keydown .search': (e) ->
 		Session.set 'filter', e.currentTarget.value
-
-		if e.currentTarget.value == ''
-			$('.col-md-12').html("")
-
+		
+	#	if e.currentTarget.value == ''
+	#		$('.resultListings').html("")
+	#		Session.set 'filter', ''
+	#		Session.set 'searchResults', false
 
 	'click .crushBtn': (e) ->
 		Session.set 'crushReceipient', this.createdBy
@@ -22,8 +22,3 @@ Template.search.helpers
 	'filter': ->
 		Session.get 'filter'
 
-	'searchResults': ->
-		Session.get 'searchResults'
-
-Template.search.rendered = ->
-	Session.set 'searchResults', false

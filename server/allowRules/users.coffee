@@ -6,7 +6,6 @@ Meteor.users.allow
 		false
 
 	remove: (userId, doc) ->
-		false
 
 Profiles.allow
 	insert: (userId, doc) ->
@@ -18,4 +17,4 @@ Profiles.allow
 		false
 
 	remove: (userId, doc) ->
-		false
+		true

@@ -19,34 +19,28 @@
 							<span class="fa fa-bars fa-lg"></span>
 						</button>
 						{{/if}}
-						<a class="navbar-brand" href="index.html">
+						<a class="navbar-brand" href="/home">
 							<img src="/img/berry/logo.png" alt="" class="logo">
 						</a>
+				
 					</div>
-					{{#if user}}
 					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						<ul class="nav navbar-nav navbar-right">
-							<li><a href="#about">about</a>
-							</li>
-							<li><a href="#features">features</a>
-							</li>
-							<li><a href="#reviews">reviews</a>
-							</li>
-							<li><a href="#screens">screens</a>
-							</li>
-							<li><a href="#demo">demo</a>
-							</li>
-							<li><a class="getApp" href="#getApp">get app</a>
-							</li>
-							<li><a href="#support">support</a>
-							</li>
+						{{#if user}}
+							<li><a href="/home">home</a></li>
+							<li><a href="/profile/edit">profile</a></li>
+					<!--		<li><a class="getApp" href="#getApp">get app</a></li> -->
+							<li><a href="/signout">logout</a></li>
+						{{else}}
+							<li><a href="/signin" class='pull-right'>SIGN IN</a></li>
+						{{/if}}
 						</ul>
 					</div>
-					{{/if}}
 				</div>
 
 			</nav>
 
+			{{#if index}}
 			<div class="tp-banner-container">
 				<div class="tp-banner">
 					<ul>
@@ -59,20 +53,20 @@
 							<div class="tp-caption lfl fadeout" data-x="left" data-y="bottom" data-hoffset="30" data-voffset="0" data-speed="500" data-start="700" data-easing="Power4.easeOut">
 								<img src="/img/berry/Slides/campuscrush-hand.png" alt="">
 							</div>
-							<div class="tp-caption lfl fadeout hidden-xs visible-md" data-x="left" data-y="center" data-hoffset="700" data-voffset="0" data-speed="500" data-start="700" data-easing="Power4.easeOut">
-								<img src="/img/berry/iphone-berry.png"  alt="">
-							</div>
-							<div class="tp-caption large_white_bold sft hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
-								Who is
+							<!-- <div class="tp-caption lfl fadeout hidden-xs visible-md" data-x="left" data-y="center" data-hoffset="700" data-voffset="0" data-speed="500" data-start="700" data-easing="Power4.easeOut">
+							<img src="/img/berry/iphone-berry.png"  alt=""> 
+							</div> -->
+							<div class="font-1 tp-caption large_white_bold sft hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+								<span class='font-2'>Who is</span>
 							</div>
 							<div class="tp-caption large_white_light sfr hidden-xs" data-x="770" data-y="center" data-hoffset="0" data-voffset="-80" data-speed="500" data-start="1400" data-easing="Power4.easeOut">
 
 							</div>
-							<div class="tp-caption large_white_light sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
+							<div class="tp-caption font-2 large_white_light sfb hidden-xs" data-x="550" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1500" data-easing="Power4.easeOut">
 								Your Crush?
 							</div>
 							<div class="tp-caption sfb" data-x="550" data-y="center" data-hoffset="0" data-voffset="85" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
-								<button type='button' data-toggle='modal' data-target="#emailModal" class="btn btn-primary inverse btn-lg">GET STARTED</button>
+								<a href="/signup" class="btn btn-primary inverse btn-lg">SIGN UP</a>
 							</div>
 						</li>
 
@@ -101,7 +95,7 @@
 								<img src="/img/berry/Slides/campuscrush.png" alt="">
 							</div>
 							<div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
-								<a href="#" class="btn btn-primary inverse btn-lg" data-toggle="modal" data-target="#emailModal">Know More</a>
+								<a href="/signup">Know More</a>
 							</div>
 							<div class="tp-caption mediumlarge_light_white sfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1000" data-easing="Power4.easeOut">
 								Everyone Has A Crush On Somebody...
@@ -113,11 +107,12 @@
 								<p>Love often begins with one look, one word, one crush.  <br>Let your campus crush know you like him/her now Anonymously or Publicly.<br></p>
 							</div>
 							<div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
-								<button type='button' data-toggle='modal' data-target='#emailModal' class="btn btn-primary inverse btn-lg">GET STARTED</button>
+								<a href='/signup' class="btn btn-primary inverse btn-lg">GET STARTED</a>
 							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
+			{{/if}}
 		</header>
 </template>

@@ -7,17 +7,27 @@
 		</div>
 
 		<div class="row searchResults">
-			{{#if searchResults}}
 				{{#each people}}
 				<div class="col-md-12">
-						<h1>{{firstname}} <button class='btn btn-primary crushBtn'>love</button></h1>
+					<div class="row">
+						<div class="col-md-offset-3 col-md-6 resultListings">
+							<div class="media feature">
+  							<a class="pull-left" href="#">
+									<img src="{{getImageUrl people.picture}}" class='img-responsive thumbnail'/>
+  							</a>
+  							<div class="media-body">
+  								<h3 class="media-heading">{{fullname}}</h3>
+									<button class='btn btn-primary crushBtn pull-right'>love</button>
+  							</div>
+  						</div>
+						</div>
+					</div>
 				</div>
 				{{else}}
 				<div class="col-md-12">
 					<h1 class="text-center">No results found for <em>{{filter}}</em></h1>
 				</div>
 				{{/each}}
-			{{/if}}
 		</div>
 	</div>
 </template>

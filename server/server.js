@@ -1,1 +1,1 @@
-process.env.MAIL_URL="smtp://snamoah%40gmail.com:chamelion@smtp.gmail.com:465/";
+process.env.MAIL_URL="smtp://campuscrush1%40gmail.com:chamelion@smtp.gmail.com:465/";

@@ -12,12 +12,13 @@ accounts-password
 twbs:bootstrap
 useraccounts:bootstrap
 reywood:iron-router-ga
-cfs:filesystem
 cfs:ui
 aldeed:autoform@=4.2.2
 aldeed:collection2@=2.3.1
 aldeed:simple-schema@=1.1.0
 cfs:gridfs@=0.0.27
-cfs:standard-packages@=0.0.0
 yogiben:autoform-file@=0.2.0
 email
+insecure
+cfs:filesystem
+cfs:standard-packages

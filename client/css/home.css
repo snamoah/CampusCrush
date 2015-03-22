@@ -1,0 +1,12 @@
+#content {
+	margin-top: 7em;
+}
+
+.last {
+	margin-right: 3em;
+	color: white;
+}
+
+.last:hover {
+	color: white;
+}

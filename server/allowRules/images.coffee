@@ -1,7 +1,7 @@
 Images.allow
   insert: (userId, doc) ->
-    true
+    return true
 	update: (userId, doc) ->
-		true
+		return true
   download: (userId)->
     true
